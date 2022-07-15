@@ -1,38 +1,77 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+button {
+  color: #009;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .App {
-  text-align: center;
+  width: 95%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.App h1:after {
+  content: '🐾';
+  margin-left: 0.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App nav button:before {
+  content: '⬅';
+  margin-right: 0.5em;
+}
+
+.App main {
+  display: flex;
+}
+
+.Profile {
+  display: flex;
+  flex-grow: 1;
+  width: 66%;
+}
+
+.Profile .profile-picture {
+  width: 100px;
+  height: 100px;
+  margin-right: 1rem;
+  display: flex;
+  background: #999;
+}
+
+.Profile .profile-picture img {
+  width: inherit;
+}
+
+.Profile.loading {
+  color: #999;
+}
+
+.Profile.loading p {
+  background: #999;
+}
+
+.Directory {
+  flex-grow: 1;
 }
